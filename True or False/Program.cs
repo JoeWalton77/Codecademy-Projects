@@ -11,18 +11,19 @@ namespace TrueOrFalse
             string entry = Console.ReadLine();
             Tools.SetUpInputStream(entry);
 
-            string[] questions1 = { "The tallest mountain in the world is Mount Everest.", "The world’s longest coastline is in China.", "The largest ocean in the world is the" +
-                    " Atlantic Ocean.", "Of all the states in the union, Alaska has the most active volcanoes.", "The Mississippi and the Nile are the two longest rivers in the" +
-                    " world." };
+            string[] questions1 = { "1. The tallest mountain in the world is Mount Everest.", "2. The world’s longest coastline is in China.", "3. The largest ocean" +
+                    " in the world is the Atlantic Ocean.", "4. Of all the states in the union, Alaska has the most active volcanoes.", "5. The Mississippi" +
+                    " and the Nile are the two longest rivers in the world." };
             bool[] answers1 = { true, false, false, true, false };
-            string[] questions2 = { "The human eyes can observe 10 million different colors.", "The tongue is the only part of the human body with taste buds.", "The average" +
-                    " human body consists of 60% water.", "The human brain contains the maximum amount of muscle density.", "The liver is the largest internal organ in the" +
-                    " human body." };
+            string[] questions2 = { "1. The human eyes can observe 10 million different colors.", "2. The tongue is the only part of the human body with" +
+                    " taste buds.", "3. The average human body consists of 60% water.", "4. The human brain contains the maximum amount of muscle density.",
+                    "5. The liver is the largest internal organ in the human body." };
             bool[] answers2 = { true, false, true, false, true };
-            string[] questions3 = { "By the number of locations, McDonald’s has the most eateries in the US.", "On the space shuttle, a potato was planted as the first crop.", 
-                "There are always even numbers of rows on corn ears.", "The most costly spice in the world is vanilla.", "French fries are a French invention." };
+            string[] questions3 = { "1. By the number of locations, McDonald’s has the most eateries in the US.", "2. On the space shuttle, a potato was planted" +
+                    " as the first crop.", "3. There are always even numbers of rows on corn ears.", "4. The most costly spice in the world is vanilla.",
+                    "5. French fries are a French invention." };
             bool[] answers3 = { false, true, true, false, false };
-            //trivia questions from https://quizandsurveymaster.com/best-true-and-false-questions-with-answers/
+            //Trivia questions from https://quizandsurveymaster.com/best-true-and-false-questions-with-answers/
 
             bool programRunning = true;
 
