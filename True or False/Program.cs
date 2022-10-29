@@ -31,21 +31,20 @@ namespace TrueOrFalse
                 Console.WriteLine("Would you like to take the quiz named 'Geography', 'Human Body', or 'Food'?");
                 string quizDecision = Console.ReadLine();
 
-                if (quizDecision == "Geography")
+                switch (quizDecision)
                 {
-                    RunQuiz(questions1, answers1);
+                    case "Geography":
+                        RunQuiz(questions1, answers1);
+                        break;
+                    case "Human Body":
+                        RunQuiz(questions2, answers2);
+                        break;
+                    case "Food":
+                        RunQuiz(questions3, answers3);
+                        break;
+                    default:
+                        break;
                 }
-
-                else if (quizDecision == "Human Body")
-                {
-                    RunQuiz(questions2, answers2);
-                }
-
-                else if (quizDecision == "Food")
-                {
-                    RunQuiz(questions3, answers3);
-                }
-                continue;
             }
         }
 
