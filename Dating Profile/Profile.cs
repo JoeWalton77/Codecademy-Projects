@@ -11,10 +11,22 @@ namespace DatingProfile
         private string pronouns;
         private string[] hobbies;
 
+        private int Age
+        {
+          get { return age; }
+          set { if (value >= 18) { age = value; }  
+          else
+                {
+                    throw new ArgumentException("Invalid age");
+                }
+            }
+
+        }  
+
         public Profile(string name, int age, string city, string country, string pronouns = "they/them")
         {
             this.name = name;
-            this.age = age;
+            this.Age = age;
             this.city = city;
             this.country = country;
             this.pronouns = pronouns;
