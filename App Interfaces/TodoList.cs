@@ -7,14 +7,28 @@ namespace AppInterfaces
         public string[] Todos
         { get; private set; }
 
+        public char HeaderSymbol
+        { get; set; }
+
         public void Display()
         {
+            char HeaderSymbol = '-';
+            string Header = new string(HeaderSymbol, 10);
+            Console.WriteLine(Header);
             Console.WriteLine("Todos:");
             int i = 0;
             foreach (string todo in Todos)
             {
-                Console.WriteLine(Todos[i]);
-                i++;
+                bool empty = String.IsNullOrEmpty(Todos[i]);
+                if (!empty)
+                {
+                    Console.WriteLine(Todos[i]);
+                    i++;
+                }
+                else if (empty)
+                {
+                    Console.WriteLine("[]");
+                }
             }
         }
 
@@ -34,8 +48,11 @@ namespace AppInterfaces
 
         public void Add(string todo)
         {
-            Todos[nextOpenIndex] = todo;
-            nextOpenIndex++;
+            if (nextOpenIndex < 5)
+            {
+                Todos[nextOpenIndex] = todo;
+                nextOpenIndex++;
+            }
         }
     }
 }

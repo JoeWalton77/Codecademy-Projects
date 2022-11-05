@@ -10,14 +10,12 @@ namespace AppInterfaces
             tdl.Add("Invite friends");
             tdl.Add("Buy decorations");
             tdl.Add("Party");
+            tdl.Add("Do some programming");
 
-            PasswordManager pm = new PasswordManager("iluvpie", true);
-
+            PasswordManager pm = new PasswordManager("iluvpie", false);
             tdl.Display();
             pm.Display();
-            tdl.Reset();
-            pm.Reset();
-            tdl.Display();
+            pm.ChangePassword("iluvpie", "eipvuli");
             pm.Display();
         }
     }
