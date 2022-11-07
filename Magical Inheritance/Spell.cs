@@ -1,0 +1,20 @@
+﻿using System;
+
+namespace MagicalInheritance
+{
+    abstract class Spell
+    {
+        public string Essence
+            { get; protected set; }
+        public bool IsStrong
+            { get; protected set; }
+        public string Strength
+            { get; protected set; }
+        public string Caster
+            { get; protected set; }
+        public string Location
+            { get; protected set; }
+
+        public abstract void Announce();
+    }
+}

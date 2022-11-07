@@ -2,22 +2,14 @@
 
 namespace MagicalInheritance
 {
-    class Storm
+    class Storm : Spell
     {
-        public string Essence
-            { get; private set; }
-        public bool IsStrong
-            { get; private set; }
-        public string Strength
-            { get; private set; }
-        public string Caster
-            { get; private set; }
-
-        public Storm(string essence, bool isStrong, string caster)
+        public Storm(string essence, bool isStrong, string caster, string location)
         {
-            essence = Essence;
-            isStrong = IsStrong;
-            caster = Caster;
+            Location = location;
+            Essence = essence;
+            IsStrong = isStrong;
+            Caster = caster;
             if (isStrong)
             {
                 Strength = "strong";
@@ -28,14 +20,10 @@ namespace MagicalInheritance
             }
         }
 
-        public string Announce()
+        public override void Announce()
         {
-            if (IsStrong)
-            {
-
-            }
-            string announcement = $"{Caster} cast a {Strength} {Essence} storm.";
-            return announcement;
+            string announcement = $"{Caster}, from {Location}, cast a {Strength} {Essence} storm.";
+            Console.WriteLine(announcement);
         }
     }
 }
